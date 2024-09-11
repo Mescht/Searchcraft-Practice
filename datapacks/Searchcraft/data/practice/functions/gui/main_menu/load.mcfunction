@@ -1,0 +1,27 @@
+data modify storage practice:recipes chestA set value []
+data modify storage practice:recipes chestB set value []
+scoreboard players set column gui 1
+#data modify storage practice:recipes R set from storage practice:recipes recipes
+#data modify storage practice:recipes L set value []
+
+scoreboard players set index gui 0
+function practice:gui/main_menu/set_recipe_selected
+scoreboard players reset index gui
+
+execute if data storage practice:recipes R[0] run function practice:gui/main_menu/load_recipes
+
+data modify block -2 61 0 Items set from storage practice:recipes chestA
+data modify block -2 61 0 Items prepend from storage practice:gui background_recipes_top[]
+
+data modify block -3 61 0 Items set from storage practice:recipes chestB
+data modify block -3 61 0 Items prepend from storage practice:gui background_recipes_bottom[]
+
+scoreboard players add page gui 1
+data merge block 0 1 0 {Text1:'[{"text":"Previous Page (","italic":"false","color":"gold"},{"score":{"name":"page","objective":"gui"}},{"text":"/10)"}]',Text2:'[{"text":"Next Page (","italic":"false","color":"gold"},{"score":{"name":"page","objective":"gui"}},{"text":"/10)"}]'}
+data modify block -3 61 0 Items[{Slot:0b}].tag.display.Name set from block 0 1 0 Text1
+data modify block -3 61 0 Items[{Slot:8b}].tag.display.Name set from block 0 1 0 Text2
+scoreboard players remove page gui 1
+
+data modify block -2 61 0 CustomName set value '{"text":"Recipes"}'
+
+scoreboard players set menu gui 0
