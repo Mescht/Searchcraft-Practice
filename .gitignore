@@ -9,3 +9,5 @@ session.lock
 standardoptions.txt
 /stats
 /advancements
+/.releases
+make_release.py
