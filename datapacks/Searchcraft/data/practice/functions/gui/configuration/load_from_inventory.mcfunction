@@ -28,4 +28,4 @@ data modify storage practice:gui inv[{Slot:33b}].Slot set value 24b
 data modify storage practice:gui inv[{Slot:34b}].Slot set value 25b
 data modify storage practice:gui inv[{Slot:35b}].Slot set value 26b
 
-data modify block -3 61 0 Items set from storage practice:gui inv
+data modify block 0 61 -3 Items set from storage practice:gui inv
