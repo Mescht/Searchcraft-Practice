@@ -4,12 +4,20 @@ Map for practicing search crafting / book crafting in Minecraft
 
 ## How it works
 
-To start practicing click the `Start` sign above the crafting table. A random craft will be selected and shown in your hotbar. After finishing one craft the time is displayed in the chat and the next craft starts right after.
+### General Configuration
+Each **column** in the chest represents a single **crafting task**. <br>
+The **top 3 rows** are showing the items you need to craft for each task. <br>
+Click the corresponding **dye** to **enable** (green) or **disable** (gray) a specific task. <br>
+Click the **book** icon to **configure the crafting task** in detail.
 
-## Configuraton
+### Configuring a Crafting Task
+The **top row** sets the crafting goals — the items the player needs to craft. <br>
+The **bottom three rows** list the items you have in your inventory while crafting the goal item(s) <br>
+Click **`Delete`** to delete the crafting task <br>
+Click **`Save`** to save your changes <br>
+Click **`Exit`** to go back to the general configuration <br>
+Click **`Load from Inventory`** to load the items from your inventory into the chest <br>
+Click **`Copy to Inventory`** to copy the items from the chest into your inventory <br>
+<br>
 
-You can configure your crafts using the chest.
-
-Each column in the chest represents one craft. The top 3 slots show which item(s) will need to be crafted, clicking the **dye** will **enable/disable** that craft and the **book** is used to **configure the items**.
-
-In the item configuration menu the **single row** at the top sets the **crafting goals** and the **3 rows** at the bottom set the **resources** that will be given to the player. All the items are fully customizable.
+To start practicing click the **`Start`** sign above the crafting table. A random craft will be selected and shown in your hotbar. After finishing one craft the time it took is displayed in the chat and the next craft starts right after.
